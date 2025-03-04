@@ -1,0 +1,53 @@
+2025-01-17 10:30:12 UTC
+Windows-10-10.0.19045
+Ren'Py 8.3.1.24090601
+
+Early init took 0.05s
+Loading error handling took 0.03s
+
+Full traceback:
+  File "C:\Program Files (x86)\renpy-8-3-1-ru-portable-x64\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "C:\Program Files (x86)\renpy-8-3-1-ru-portable-x64\renpy\main.py", line 470, in main
+    renpy.game.script.load_script() # sets renpy.game.script.
+  File "C:\Program Files (x86)\renpy-8-3-1-ru-portable-x64\renpy\script.py", line 359, in load_script
+    self.load_appropriate_file(".rpyc", [ "_ren.py", ".rpy" ], dir, fn, initcode)
+  File "C:\Program Files (x86)\renpy-8-3-1-ru-portable-x64\renpy\script.py", line 929, in load_appropriate_file
+    data, stmts = self.load_file(dir, fn + source)
+  File "C:\Program Files (x86)\renpy-8-3-1-ru-portable-x64\renpy\script.py", line 721, in load_file
+    stmts = renpy.parser.parse(fullfn)
+  File "C:\Program Files (x86)\renpy-8-3-1-ru-portable-x64\renpy\parser.py", line 1676, in parse
+    lines = list_logical_lines(fn, filedata, linenumber)
+  File "C:\Program Files (x86)\renpy-8-3-1-ru-portable-x64\renpy\lexer.py", line 298, in list_logical_lines
+    data = f.read().decode("utf-8", "python_strict")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc2 in position 2: invalid continuation byte
+
+While parsing C:\Users\Алхасов А А\Desktop\Визуал\Stuff\game/script.rpy.
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc2 in position 2: invalid continuation byte
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\renpy-8-3-1-ru-portable-x64\renpy\bootstrap.py", line 359, in bootstrap
+    renpy.main.main()
+  File "C:\Program Files (x86)\renpy-8-3-1-ru-portable-x64\renpy\main.py", line 470, in main
+    renpy.game.script.load_script() # sets renpy.game.script.
+  File "C:\Program Files (x86)\renpy-8-3-1-ru-portable-x64\renpy\script.py", line 359, in load_script
+    self.load_appropriate_file(".rpyc", [ "_ren.py", ".rpy" ], dir, fn, initcode)
+  File "C:\Program Files (x86)\renpy-8-3-1-ru-portable-x64\renpy\script.py", line 929, in load_appropriate_file
+    data, stmts = self.load_file(dir, fn + source)
+  File "C:\Program Files (x86)\renpy-8-3-1-ru-portable-x64\renpy\script.py", line 721, in load_file
+    stmts = renpy.parser.parse(fullfn)
+  File "C:\Program Files (x86)\renpy-8-3-1-ru-portable-x64\renpy\parser.py", line 1676, in parse
+    lines = list_logical_lines(fn, filedata, linenumber)
+  File "C:\Program Files (x86)\renpy-8-3-1-ru-portable-x64\renpy\lexer.py", line 298, in list_logical_lines
+    data = f.read().decode("utf-8", "python_strict")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc2 in position 2: invalid continuation byte
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\renpy-8-3-1-ru-portable-x64\renpy\editor.py", line 171, in launch_editor
+    editor.end()
+  File "C:\Program Files (x86)\renpy-8-3-1-ru-portable-x64\launcher\Visual Studio Code (System).edit.py", line 77, in end
+    subprocess.Popen(args, creationflags=CREATE_NO_WINDOW)
+  File "lib/python3.9/subprocess.py", line 951, in __init__
+  File "lib/python3.9/subprocess.py", line 1420, in _execute_child
+FileNotFoundError: [WinError 2] Не удается найти указанный файл

@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 4: expected statement.
+    from turtle import left
+                           ^
+
+Ren'Py Version: Ren'Py 8.3.1.24090601
+Fri Jan 24 11:55:47 2025
