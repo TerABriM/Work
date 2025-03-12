@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+:root {
+    --bg-color: #01053f;
+    --second-bg-color: #500000;
+    --text-color: #ffffff;
+    --main-color: #ffa600;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: .5s;
+}
+
+.header.sticky {
+    background: var(--second-bg-color);
+}
+
+.logo {
+
+    position: relative;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.navbar {
+    position: relative;
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+#menu-icon {
+    position: relative;
+    font-size: 3.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    padding: 0 9%;
+    background: url('img/img5') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home-content {
+    max-width: 20rem;
+    z-index: 99;
+}
+
+.home-content h1{
+    position: relative;
+    display: inline-block;
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-content h1 span {
+    color: var(--text-color);
+}
+
+.home-content .text-animate {
+    position: relative;
+    width: 32.8rem;
+}
+
+.home-content .text-animate h3 {
+    font-size: 9.6rem;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: .7px var(--main-color);
+    background-image: linear-gradient(var(--main-color), var(--main-color));   
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -33rem 0;
+}
+
+.home.show-animate .home-content .text-animate h3 {
+    animation: homeBgText 6s linear infinite;
+    animation-delay: 2s;
+}
+
+.home-content .text-animate h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 2px solid var(--main-color);
+    z-index: -1; 
+}
+
+.home.show-animate .home-content .text-animate h3::before {
+    animation: homeCursorText 6s linear infinite;
+    animation-delay: 2s;
+}
+
+.home-content p {
+    position: relative;
+    font-size: 1.6rem;
+    margin: 2rem 0 4rem;
+}
+
+.btn-box {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 34.5rem;
+    height: 8rem;
+}
+
+.btn-box .btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60;
+    height: 40%;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--bg-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box .btn:hover {
+    color: var(--main-color);
+}
+
+.btn-box .btn:nth-child(2){
+    background: transparent;
+    color: var(--main-color);
+}
+
+.btn-box .btn:nth-child(2):hover {
+    color: var(--bg-color);    
+}
+
+.btn-box .btn:nth-child(2)::before {
+    background: var(--main-color);
+}
+
+.btn-box .btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box .btn:hover::before {
+    width: 100%;
+}
+
+
+
+
+.sci 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column
+}
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 40px;
+    color: var(--main-color);
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.home-sci a:hover {
+    color: var(--bg-color);
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before{
+    width: 100%;
+}
+
+.home-imgHover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+}
+
+
+
+.home-imgHover:hover {
+    background: var(--bg-color);
+    opacity: .8;
+}
+
+
+
+.blockSlider {
+    display: flex;
+    max-width: 768px;
+    width: 100%;
+    height: 388px;
+    border:  1px solid black;
+    border-radius: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+}
+.FullArea{
+    display:flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.pointsAreaSize{
+    width:  150px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 5%;
+}
+.point{
+    display: flex;
+    width: 12px;
+    height: 12px;
+    background: rgb(229, 229, 229);
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.point:hover{
+    background: rgb(160, 167, 243);
+}
+.imagesArea{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.imageSlider{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    animation-name: Animation;
+    animation-duration: 1s;
+}
+.activeImage{
+    background: rgb(115, 126, 250);
+    display: flex;
+    border-radius: 20px;
+}
+.btnsAreaSize{
+    position: absolute;
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+}
+i.fa.fa-angle-left, i.fa.fa-angle-right{
+    color: rgb(115, 126, 250);
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: 800;
+}
+.blockArrow{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: 1ps solid white;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.blockArrow:hover{
+    background: rgba(39,39,39,0.59);
+    border: 1px solid white;
+    color:white;
+    cursor: pointer;
+}
+
+.blockArrow:active{
+    background: rgba(16,16,16,0.59);
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+@-webkit-keyframes Animation {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+.panel {
+    display: flex;
+    justify-content: center; /* Центрирует по горизонтали */
+    align-items: center; /* Центрирует по вертикали */
+    height: 50vh; /* Высота вьюпорта */
+    margin: 0; /* Убирает отступы */
+    font-family: Arial, sans-serif; /* Шрифт */
+}
+.regist {
+    text-align: center; /* Центрирует текст внутри контейнера */
+}
+
+.bac {
+    margin: 0; /* Убирает отступы по умолчанию */
+    height: 95vh; /* Задает высоту на весь экран */
+    background-image: url('/img/img5.jpg'); /* Замените на URL вашего изображения */
+    background-size: cover; /* Масштабирует изображение, чтобы оно покрывало весь фон */
+    background-position: center; /* Центрирует изображение на экране */
+    background-repeat: no-repeat; /* Не повторяет изображение */
+}
+
+.content {
+    color: var(--bg-color);
+    padding: 20px; /* Отступы внутри контейнера */
+}
+
+.text-section {
+    border: 2px solid var(--main-color); /* Цвет и стиль рамки */
+    padding: 30px; /* Отступы внутри рамки */
+    margin: 30px; /* Отступы вокруг рамки */
+    border-radius: 10px; /* Скругление углов рамки */
+    text-align: center; /* Центрирует текст внутри секции */
+    background-color: var(--bg-color); /* Цвет фона секции */
+}
+
+.panel input {
+   width:100px;
+   padding: 2px;
+   margin: 2px;
+   border: 2px solid var(--main-color);
+   background-color: var(--bg-color);
+   border-radius: 5px;
+   color: var(--text-color);
+}
+.panel button{
+    width:auto;
+    padding: 2px;
+    margin: 2px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    border-radius: 5px;
+    text-align: center;
+    color: var(--main-color);
+}
+.underline {
+    text-decoration: underline;
+}
+
+
+
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+  }
+  
+  /* Скрываем стандартный чекбокс */
+  .checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Создаем кастомную галочку */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* При наведении меняем цвет фона */
+  .checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* Когда чекбокс отмечен, меняем цвет фона */
+  .checkbox-container input:checked ~ .checkmark {
+    background-color: #2196F3;
+    border-color: #2196F3;
+  }
+  
+  /* Создаем галочку (скрытую по умолчанию) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Показываем галочку, когда чекбокс отмечен */
+  .checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Стили для галочки */
+  .checkbox-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+
+  #inputField {
+    padding: 10px;
+    font-size: 16px;
+}
+#toggleButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#output {
+    margin-top: 20px;
+    font-size: 18px;
+}
