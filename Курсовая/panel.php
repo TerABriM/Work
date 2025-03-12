@@ -7,7 +7,7 @@
             <title>Document</title>
         </head>
         <body>
-            <form action="register.php" method="post">
+            <form action="registe.php" method="post">
                 <input type="text" placeholder="login" name="login"> 
                 <input type="text" placeholder="password" name="pass">
                 <input type="text" placeholder="repeat password" name="repeatpass">
