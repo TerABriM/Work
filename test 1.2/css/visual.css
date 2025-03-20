@@ -56,3 +56,18 @@ body {
 #panel button:hover {
     background-color: #232188;
 }
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px; /* Можно настроить под ваш дизайн */
+    margin: 10px 0;
+}
+.checkbox-container label {
+    order: 1; /* Текст будет слева */
+}
+.checkbox-container input {
+    order: 2; /* Чекбокс будет справа */
+}
