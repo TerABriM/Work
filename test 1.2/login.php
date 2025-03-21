@@ -1,44 +1,20 @@
-<?php
-require_once('db.php');
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <link rel="stylesheet" href="css/visual.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>    
 
-// Получаем данные из формы
-$login = $_POST['login'];
-$pass = $_POST['pass'];
-
-// Проверяем, заполнены ли все поля
-if (empty($login) || empty($pass)) {
-    echo "Заполните все поля";
-} else {
-    // Используем подготовленные выражения для защиты от SQL-инъекций
-    $sql = "SELECT * FROM `Users` WHERE login = ? AND pass = ?";
-    $stmt = $conn->prepare($sql);
-
-    if ($stmt) {
-        // Привязываем параметры к запросу
-        $stmt->bind_param("ss", $login, $pass);
-
-        // Выполняем запрос
-        $stmt->execute();
-
-        // Получаем результат
-        $result = $stmt->get_result();
-
-        // Проверяем, есть ли результаты
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                echo "Добро пожаловать, " . $row['login'];
-            }
-        } else {
-            echo "Нет такого пользователя";
-        }
-
-        // Закрываем запрос
-        $stmt->close();
-    } else {
-        echo "Ошибка подготовки запроса";
-    }
-}
-
-// Закрываем соединение с базой данных
-$conn->close();
-?>
+<body>
+    <form action="login.php" method= "post" id="panel" >
+        <p>Вход</p>
+        <input type="text" placeholder= "login" name= "login"> 
+        <input type="text" placeholder="password" name= "pass">
+        <button type="submit"> Войти </button>
+    </form>
+</body>
+</html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -16,7 +17,7 @@
         <input type="password" id="inputField" placeholder="Повторите пароль" name="repeatpass">
         <input type="text" placeholder="Email" name="email">
         
-        <!-- Контейнер для чекбокса и текста -->
+
         <div class="checkbox-container">
             <label for="agreeCheckbox">Я согласен с условиями использования</label>
             <input type="checkbox" id="agreeCheckbox" name="agree">
@@ -24,6 +25,6 @@
         
         <button type="submit">Зарегистрироваться</button>
     </form>
-<script href="/js/java.js"></script>
+
 </body>
 </html>

@@ -3,15 +3,15 @@
 $servername = "locolhost";
 $username = "root";
 $password = "";
-$dbname = "registerUser";
+$dbname = "register_user";
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+$conn = mysqli_connect('localhost', 'root', '', 'register_user');
 
-if(!$conn){
-    die("Ошибка". mysqli_connect_error());
-} else {
+if (!$conn) {
+    die("Ошибка подключения: " . mysqli_connect_error());
+}
+ else {
    "Успех";
 }
 
-http://127.0.0.1:5500/subfolder/register.php
 ?>
