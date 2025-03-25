@@ -1,14 +1,18 @@
 <?php
+// register.php
 
-$servername = "locolhost";
-$username = "root";
-$password = "";
-$dbname = "register_user";
+// Подключение к базе данных
+$servername = "localhost";
+$username = "root";  // стандартный пользователь XAMPP
+$password = "";      // стандартный пароль XAMPP
+$dbname = "registeruser"; // имя вашей базы данных
 
-$conn = mysqli_connect('localhost', 'root', '', 'register_user');
+// Создание соединения
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-if (!$conn) {
-    die("Ошибка подключения: " . mysqli_connect_error());
+// Проверка соединения
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
  else {
    "Успех";

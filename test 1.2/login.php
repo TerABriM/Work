@@ -15,6 +15,7 @@
         <input type="text" placeholder= "login" name= "login"> 
         <input type="text" placeholder="password" name= "pass">
         <button type="submit"> Войти </button>
+        <a href="indexRegist.php" >Создать новую учетную запись аккаунт </a>
     </form>
 </body>
 </html>
