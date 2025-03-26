@@ -28,10 +28,10 @@
                     <?php
                     // Массив изображений для слайдера
                     $sliderImages = [
-                        "images/slide1.jpg",
-                        "images/slide2.jpg",
-                        "images/slide3.jpg",
-                        "images/slide4.jpg"
+                        "",
+                        "",
+                        "",
+                        ""
                     ];
                     
                     foreach ($sliderImages as $image) {
@@ -57,6 +57,6 @@
         </div>
     </section>
     
-    <script src="js/java.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -12,8 +12,8 @@
     <header>
         <div><?php echo 'ВірВazar'; ?></div>
         <nav>
-            <a href="/servis.php">Услуги</a>
-            <a href="/contact.php">Контакты</a>
+            <a href="servis.php">Услуги</a>
+            <a href="contact.php">Контакты</a>
         </nav>
         <div>
             <a href="#">Поиск</a>

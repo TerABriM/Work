@@ -1,0 +1,95 @@
+/* Общие стили для body */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-image: url('/imag/image.jpg'); /* Укажите путь к вашей картинке */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Стили для формы */
+#panel {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px; /* Внутренний отступ формы */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+/* Стили для заголовка */
+#panel p {
+    font-size: 24px;
+    margin: 0 0 20px 0; /* Отступ только снизу */
+    color: #333;
+}
+
+/* Стили для input */
+#panel input {
+    width: calc(100% - 20px); /* Ширина с учетом padding */
+    padding: 10px;
+    margin-bottom: 15px; /* Отступ между полями */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Стили для кнопки */
+#panel button {
+    width: calc(100% - 20px); /* Ширина с учетом padding */
+    padding: 10px;
+    background-color: #2831a7;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 0; /* Убираем отступ снизу */
+}
+
+#panel button:hover {
+    background-color: #232188;
+}
+
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+.checkbox-label {
+    margin-right: 10px;
+}
+.custom-checkbox {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+.custom-checkbox:checked {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+.custom-checkbox:checked::after {
+    content: '\2713';
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#submitBtn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
