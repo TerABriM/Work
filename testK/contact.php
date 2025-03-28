@@ -12,6 +12,7 @@
     <header>
         <div><?php echo 'ВірВazar'; ?></div>
         <nav>
+            <a href="profil.php">Мой профиль</a>
             <a href="index.php">Главная</a>
             <a href="servis.php">Услуги</a>
         </nav>

@@ -7,7 +7,7 @@ body {
     align-items: center;
     height: 100vh;
     font-family: Arial, sans-serif;
-    background-image: url('/imag/image.jpg'); /* Укажите путь к вашей картинке */
+    background-image: url('/imag/image.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -16,7 +16,7 @@ body {
 /* Стили для формы */
 #panel {
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px; /* Внутренний отступ формы */
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
@@ -26,46 +26,114 @@ body {
 /* Стили для заголовка */
 #panel p {
     font-size: 24px;
-    margin: 0 0 20px 0; /* Отступ только снизу */
+    margin: 0 0 20px 0;
     color: #333;
+    font-weight: bold;
 }
 
 /* Стили для input */
 #panel input {
-    width: calc(100% - 20px); /* Ширина с учетом padding */
+    width: calc(100% - 20px);
     padding: 10px;
-    margin-bottom: 15px; /* Отступ между полями */
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
-/* Стили для кнопки */
-#panel button {
-    width: calc(100% - 20px); /* Ширина с учетом padding */
-    padding: 10px;
+/* Стили для контейнера с паролем */
+.password-container {
+    position: relative;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 40px; /* Оставляем место для кнопки */
+    box-sizing: border-box;
+}
+
+/* Стили для кнопки показа пароля */
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    padding: 0; /* Убрать лишний внутренний отступ */
+    width: 24px; /* Фиксированный размер */
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Использование SVG вместо шрифтовых иконок */
+.toggle-password svg {
+    width: 18px; /* Контроль размера через SVG */
+    height: 18px;
+    fill: currentColor; /* Наследование цвета */
+}
+
+/* Адаптивность для мобильных (добавлено) */
+@media (max-width: 480px) {
+    .toggle-password {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .toggle-password svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Остальные стили оставить без изменений, кроме: */
+.password-container input {
+    padding-right: 35px; /* Уменьшил отступ под размер иконки */
+}
+
+/* Стили для кнопки регистрации */
+#panel button[type="submit"] {
+    width: 100%;
+    padding: 12px;
     background-color: #2831a7;
     color: #fff;
     border: none;
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
-    margin-bottom: 0; /* Убираем отступ снизу */
+    margin-top: 10px;
+    transition: background-color 0.3s;
 }
 
-#panel button:hover {
+#panel button[type="submit"]:hover {
     background-color: #232188;
 }
 
+#submitBtn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
 
+/* Стили для чекбокса */
 .checkbox-container {
     display: flex;
     align-items: center;
+    justify-content: center;
     margin: 15px 0;
 }
+
 .checkbox-label {
     margin-right: 10px;
+    font-size: 14px;
 }
+
 .custom-checkbox {
     appearance: none;
     width: 18px;
@@ -76,10 +144,12 @@ body {
     cursor: pointer;
     position: relative;
 }
+
 .custom-checkbox:checked {
     background-color: #4CAF50;
     border-color: #4CAF50;
 }
+
 .custom-checkbox:checked::after {
     content: '\2713';
     font-size: 14px;
@@ -89,7 +159,16 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-#submitBtn:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
+
+/* Стили для ссылок */
+#panel a {
+    display: block;
+    color: #2831a7;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+#panel a:hover {
+    text-decoration: underline;
 }
