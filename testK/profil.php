@@ -11,7 +11,7 @@
     <!-- Навигационная панель -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
         <div class="container">
-            <a class="navbar-brand" href="#">BigBazar</a>
+            <a class="navbar-brand" href="main.php">BigBazar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -174,6 +174,7 @@
                 </div>
                 <div class="col-md-3">
                     <h5>Поддержка</h5>
+
                     <ul class="list-unstyled">
                         <li><a href="#" class="text-white">Помощь</a></li>
                         <li><a href="#" class="text-white">FAQ</a></li>

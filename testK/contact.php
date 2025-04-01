@@ -3,54 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/still.css">
-    <link rel="stylesheet" href="css/styl.css">
+    <link rel="stylesheet" href="css/stillCont.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title><?php echo htmlspecialchars('ВірВazar', ENT_QUOTES, 'UTF-8'); ?></title>
+    <title>Моя контактная информация</title>
 </head>
-<body>
-    <header>
-        <div><?php echo 'ВірВazar'; ?></div>
-        <nav>
-            <a href="profil.php">Мой профиль</a>
-            <a href="index.php">Главная</a>
-            <a href="servis.php">Услуги</a>
-        </nav>
-    </header>
-    
-    <section class="html"> 
-        <div class="frame">
-            <div class="content">
-                <?php
-                // Массив социальных сетей с иконками
-                $socialLinks = [
-                    [
-                        'icon' => 'bxl-discord-alt',
-                        'url'  => '#', // Замените на реальные ссылки
-                        'title' => 'Discord'
-                    ],
-                    [
-                        'icon' => 'bxl-telegram',
-                        'url'  => '#',
-                        'title' => 'Telegram'
-                    ],
-                    [
-                        'icon' => 'bxl-whatsapp',
-                        'url'  => '#',
-                        'title' => 'WhatsApp'
-                    ]
-                ];
-                
-                // Выводим иконки социальных сетей
-                foreach ($socialLinks as $social) {
-                    echo '<a href="' . htmlspecialchars($social['url'], ENT_QUOTES, 'UTF-8') . '" 
-                          title="' . htmlspecialchars($social['title'], ENT_QUOTES, 'UTF-8') . '">
-                          <i class="bx ' . htmlspecialchars($social['icon'], ENT_QUOTES, 'UTF-8') . '"></i></a>';
-                }
-                ?>
-            </div>
-        </div>
-    </section>
 
+<header>
+    <a href="main.php"><i class='bx bx-horizontal-left'></i></h>
+</header>
+<body>
+    <div class="frame">
+        <h1>Контактная информация</h1>
+        
+        <div class="info">
+            <p><strong>ФИО:</strong> Иванов Иван Иванович</p>
+            <p><strong>Почта:</strong> example@email.com</p>
+            <p><strong>Адрес:</strong> г. Москва, ул. Примерная, д. 1</p>
+        </div>
+        
+        <div class="social-icons">
+            <a href="https://t.me/your_telegram" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" class="social-icon">
+            </a>
+            <a href="https://wa.me/your_whatsapp" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="social-icon">
+            </a>
+            <a href="https://vk.com/your_vk" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/VK.com-logo.svg" alt="VKontakte" class="social-icon">
+            </a>
+        </div>
+    </div>
 </body>
 </html>

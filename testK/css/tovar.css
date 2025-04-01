@@ -1,0 +1,97 @@
+:root {
+    --primary-color: #4a6bff;
+    --secondary-color: #f8f9fa;
+    --accent-color: #ff6b6b;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.auction-container {
+    max-width: 800px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.auction-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.auction-header h1 {
+    font-weight: bold;
+    margin: 0;
+}
+
+.auction-form {
+    padding: 25px;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #333;
+}
+
+.form-control, .form-select {
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(74, 107, 255, 0.25);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 12px;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.btn-primary:hover {
+    background-color: #3a5bef;
+}
+
+.form-text {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.input-group-text {
+    background-color: #eee;
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.modal-header {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.modal-title {
+    font-weight: 600;
+}
+
+.price-highlight {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.section-divider {
+    border-top: 2px solid #eee;
+    margin: 25px 0;
+}

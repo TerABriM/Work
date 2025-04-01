@@ -72,4 +72,8 @@ try {
     $conn->close();
 }
 
+// В конце файла register.php после успешной обработки:
+header('Location: main.html');
+exit()
+
 ?>

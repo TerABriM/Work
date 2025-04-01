@@ -1,61 +1,52 @@
-/* Общие стили для body */
 body {
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: Arial, sans-serif;
-    background-image: url('/imag/image.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-/* Стили для формы */
-#panel {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-}
-
-/* Стили для заголовка */
-#panel p {
-    font-size: 24px;
-    margin: 0 0 20px 0;
+    margin: 0;
     color: #333;
-    font-weight: bold;
 }
 
-/* Стили для input */
-#panel input {
-    width: calc(100% - 20px);
-    padding: 10px;
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    max-width: 100%;
+}
+
+.cen {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.cen p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 12px 15px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
     box-sizing: border-box;
 }
 
-/* Стили для контейнера с паролем */
 .password-container {
     position: relative;
     margin-bottom: 15px;
-    width: 100%;
 }
 
-.password-container input {
-    width: 100%;
-    padding-right: 40px; /* Оставляем место для кнопки */
-    box-sizing: border-box;
-}
-
-/* Стили для кнопки показа пароля */
 .toggle-password {
     position: absolute;
     right: 10px;
@@ -65,110 +56,54 @@ body {
     border: none;
     cursor: pointer;
     color: #666;
-    padding: 0; /* Убрать лишний внутренний отступ */
-    width: 24px; /* Фиксированный размер */
-    height: 24px;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin: 10px 0;
+}
+
+.checkbox-container {
     display: flex;
     align-items: center;
-    justify-content: center;
+    margin: 15px 0;
 }
 
-/* Использование SVG вместо шрифтовых иконок */
-.toggle-password svg {
-    width: 18px; /* Контроль размера через SVG */
+.checkbox-label {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.custom-checkbox {
+    width: 18px;
     height: 18px;
-    fill: currentColor; /* Наследование цвета */
+    accent-color: #0066cc;
 }
 
-/* Адаптивность для мобильных (добавлено) */
-@media (max-width: 480px) {
-    .toggle-password {
-        width: 20px;
-        height: 20px;
-    }
-    
-    .toggle-password svg {
-        width: 16px;
-        height: 16px;
-    }
-}
-
-/* Остальные стили оставить без изменений, кроме: */
-.password-container input {
-    padding-right: 35px; /* Уменьшил отступ под размер иконки */
-}
-
-/* Стили для кнопки регистрации */
-#panel button[type="submit"] {
+button[type="submit"] {
     width: 100%;
     padding: 12px;
-    background-color: #2831a7;
-    color: #fff;
+    background-color: #0066cc;
+    color: white;
     border: none;
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
-    transition: background-color 0.3s;
 }
 
-#panel button[type="submit"]:hover {
-    background-color: #232188;
-}
-
-#submitBtn:disabled {
+button[type="submit"]:disabled {
     background-color: #cccccc;
     cursor: not-allowed;
 }
 
-/* Стили для чекбокса */
-.checkbox-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 15px 0;
-}
-
-.checkbox-label {
-    margin-right: 10px;
+.signature {
+    margin-top: 30px;
+    text-align: center;
+    font-style: italic;
+    color: #666;
     font-size: 14px;
-}
-
-.custom-checkbox {
-    appearance: none;
-    width: 18px;
-    height: 18px;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-    cursor: pointer;
-    position: relative;
-}
-
-.custom-checkbox:checked {
-    background-color: #4CAF50;
-    border-color: #4CAF50;
-}
-
-.custom-checkbox:checked::after {
-    content: '\2713';
-    font-size: 14px;
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* Стили для ссылок */
-#panel a {
-    display: block;
-    color: #2831a7;
-    text-decoration: none;
-    margin: 10px 0;
-    font-size: 14px;
-}
-
-#panel a:hover {
-    text-decoration: underline;
 }

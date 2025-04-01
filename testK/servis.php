@@ -57,6 +57,10 @@
             </div>
         </div>
     </section>
+
+    <section>
+                    Стать аукционером
+    </section>
     
     <script src="js/script.js"></script>
 </body>
