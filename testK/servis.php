@@ -22,45 +22,7 @@
         </div>
     </header>
     
-    <section class="senter">
-        <div class="blockSlider" id="blockSlider">
-            <div class="FullArea">
-                <div class="imagesArea">
-                    <?php
-                    // Массив изображений для слайдера
-                    $sliderImages = [
-                        "",
-                        "",
-                        "",
-                        ""
-                    ];
-                    
-                    foreach ($sliderImages as $image) {
-                        echo '<img class="imageSlider" src="'.$image.'" alt="">';
-                    }
-                    ?>
-                </div>
-                
-                <div class="pointsAreaSize">
-                    <?php
-                    // Создаем точки для навигации
-                    for ($i = 0; $i < count($sliderImages); $i++) {
-                        echo '<span class="point"></span>';
-                    }
-                    ?>
-                </div>
-                
-                <div class="btnsAreaSize">
-                    <div class="blockArrow" id="leftBtn"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
-                    <div class="blockArrow" id="rightBtn"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section>
-                    Стать аукционером
-    </section>
     
     <script src="js/script.js"></script>
 </body>
