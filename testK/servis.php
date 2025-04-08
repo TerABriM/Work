@@ -11,11 +11,14 @@
 </head>
 <body>
     <header>
-        <div>ВірВazar</div>
+        <div>
+            <h1 href="profil.php">
+                ВірВazar
+            </h1>
+        </div>
         <nav>
-            <a href="profil.php">Мой профиль</a>
-            <a href="index.php">Главная</a>
-            <a href="servis.php">Контакты</a>
+            <a href="main.php">Главная</a>
+            <a href="contact.php">Контакты</a>
         </nav>
         <div>
             <a href="#">Поиск</a>
@@ -30,13 +33,13 @@
                     // Массив изображений и ссылок для слайдера
                     $sliderItems = [
                         ["image" => "image1.jpg", "link" => "page1.php"],
-                        ["image" => "img/aukgioner.png", "link" => ".php"],
+                        ["image" => "img/aukgioner.png", "link" => "#"], // Была пустая ссылка ".php"
                         ["image" => "img/moder.png", "link" => "moderReg.php"],
                         ["image" => "img/tovar.png", "link" => "tovar.php"]
                     ];
                     
                     foreach ($sliderItems as $item) {
-                        echo '<a href="'.$item['link'].'"><img class="imageSlider" src="'.$item['image'].'" alt=""></a>';
+                        echo '<a href="'.$item['link'].'"><img class="imageSlider" src="'.$item['image'].'" alt="Slider image"></a>';
                     }
                     ?>
                 </div>
@@ -45,14 +48,14 @@
                     <?php
                     // Создаем точки для навигации
                     for ($i = 0; $i < count($sliderItems); $i++) {
-                        echo '<span class="point"></span>';
+                        echo '<span class="point" data-index="'.$i.'"></span>';
                     }
                     ?>
                 </div>
                 
                 <div class="btnsAreaSize">
-                    <div class="blockArrow" id="leftBtn"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
-                    <div class="blockArrow" id="rightBtn"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                    <button class="blockArrow" id="leftBtn"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                    <button class="blockArrow" id="rightBtn"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
                 </div>
             </div>
         </div>
