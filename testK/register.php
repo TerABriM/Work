@@ -74,6 +74,6 @@ try {
 
 // В конце файла register.php после успешной обработки:
 header('Location: main.html');
-exit()
+exit();
 
 ?>

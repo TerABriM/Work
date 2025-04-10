@@ -3,15 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/stillCont.css">
+    <link rel="stylesheet" href="css/still.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Моя контактная информация</title>
-</head>
+    <title>ВірВazar</title>
+    <style>
+        .frame {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
 
-<header>
-    <a href="main.php"><i class='bx bx-horizontal-left'></i></h>
-</header>
+        .info {
+            margin: 20px 0;
+        }
+
+        .info p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
 <body>
+    <header>
+        <div class="logo"><a href="main.php">ВірВazar</a></div>
+        <nav>
+            <a href="profil.php">Мой профиль</a>
+            <a href="servis.php">Услуги</a>
+            <a href="contact.php">Контакты</a>
+        </nav>
+        <div>
+            <a href="#">Поиск</a>
+        </div>
+    </header>
+
     <div class="frame">
         <h1>Контактная информация</h1>
         

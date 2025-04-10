@@ -86,7 +86,7 @@
         </label>
     </div>
 
-    <button type="submit" class="btn btn-primary w-100" href="servis.php" >Выставить на аукцион</button>
+    <button type="submit" class="btn btn-primary w-100">Выставить на аукцион</button>
 </form>
 
 <!-- Модальное окно с правилами -->

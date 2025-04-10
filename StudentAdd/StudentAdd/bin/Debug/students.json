@@ -1,0 +1,22 @@
+[
+  {
+    "Id": 1,
+    "FirstName": "",
+    "LastName": "",
+    "Group": null,
+    "Course": 0,
+    "BirthDate": null,
+    "Email": null,
+    "Phone": null
+  },
+  {
+    "Id": 2,
+    "FirstName": "1212",
+    "LastName": "21212121",
+    "Group": null,
+    "Course": 0,
+    "BirthDate": null,
+    "Email": null,
+    "Phone": null
+  }
+]

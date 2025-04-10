@@ -8,59 +8,190 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>ВірВazar</title>
+    <style>
+        .slider-container {
+            max-width: 800px;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 400px;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slider-nav {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+
+        .slider-dot {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .slider-dot.active {
+            background-color: #007bff;
+            transform: scale(1.2);
+        }
+
+        .slider-dot:hover {
+            background-color: #0056b3;
+        }
+
+        .slider-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div>
-            <h1 href="profil.php">
-                ВірВazar
-            </h1>
-        </div>
+        <div class="logo"> <a href="main.php">ВірВazar</a></div>
         <nav>
-            <a href="main.php">Главная</a>
+            <a href="profil.php">Мой профиль</a>
             <a href="contact.php">Контакты</a>
         </nav>
         <div>
             <a href="#">Поиск</a>
         </div>
     </header>
-    
-    <section class="senter">
-        <div class="blockSlider" id="blockSlider">
-            <div class="FullArea">
-                <div class="imagesArea">
-                    <?php
-                    // Массив изображений и ссылок для слайдера
-                    $sliderItems = [
-                        ["image" => "image1.jpg", "link" => "page1.php"],
-                        ["image" => "img/aukgioner.png", "link" => "#"], // Была пустая ссылка ".php"
-                        ["image" => "img/moder.png", "link" => "moderReg.php"],
-                        ["image" => "img/tovar.png", "link" => "tovar.php"]
-                    ];
-                    
-                    foreach ($sliderItems as $item) {
-                        echo '<a href="'.$item['link'].'"><img class="imageSlider" src="'.$item['image'].'" alt="Slider image"></a>';
-                    }
-                    ?>
-                </div>
-                
-                <div class="pointsAreaSize">
-                    <?php
-                    // Создаем точки для навигации
-                    for ($i = 0; $i < count($sliderItems); $i++) {
-                        echo '<span class="point" data-index="'.$i.'"></span>';
-                    }
-                    ?>
-                </div>
-                
-                <div class="btnsAreaSize">
-                    <button class="blockArrow" id="leftBtn"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
-                    <button class="blockArrow" id="rightBtn"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
-                </div>
+
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <img src="img/slide1.jpg" alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="img/slide2.jpg" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="img/slide3.jpg" alt="Slide 3">
+            </div>
+            <div class="slide">
+                <img src="img/slide4.jpg" alt="Slide 4">
             </div>
         </div>
-    </section>
+        <button class="slider-arrow prev">❮</button>
+        <button class="slider-arrow next">❯</button>
+        <div class="slider-nav">
+            <div class="slider-dot active">1</div>
+            <div class="slider-dot">2</div>
+            <div class="slider-dot">3</div>
+            <div class="slider-dot">4</div>
+        </div>
+    </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.slider-dot');
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+            
+            let currentSlide = 0;
+            const slideCount = slides.length;
+            let slideInterval;
+
+            function updateSlider() {
+                slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slideCount;
+                updateSlider();
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+                updateSlider();
+            }
+
+            function startSlideShow() {
+                slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
+            }
+
+            function stopSlideShow() {
+                clearInterval(slideInterval);
+            }
+
+            // Event listeners
+            nextBtn.addEventListener('click', () => {
+                stopSlideShow();
+                nextSlide();
+                startSlideShow();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                stopSlideShow();
+                prevSlide();
+                startSlideShow();
+            });
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    stopSlideShow();
+                    currentSlide = index;
+                    updateSlider();
+                    startSlideShow();
+                });
+            });
+
+            // Start the slideshow
+            startSlideShow();
+
+            // Pause slideshow when hovering over slider
+            slider.addEventListener('mouseenter', stopSlideShow);
+            slider.addEventListener('mouseleave', startSlideShow);
+        });
+    </script>
+    
     <script src="js/script.js"></script>
 </body>
 </html>
